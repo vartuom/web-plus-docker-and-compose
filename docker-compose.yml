@@ -5,8 +5,6 @@ networks:
     internal: true
   http-network:
     driver: bridge
-volumes:
-  kupipodariday-pg-data: {}
 services:
   database:
     image: postgres:12-alpine
@@ -14,7 +12,7 @@ services:
       - .env
     container_name: kupipodariday-database
     volumes:
-      - kupipodariday-pg-data:/process.env.POSTGRES_PGDATA
+      - /home/artem/kpd-project/db:/var/lib/postgresql/data
     networks:
       - db-network
     ports:

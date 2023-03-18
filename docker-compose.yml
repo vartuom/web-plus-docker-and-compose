@@ -5,6 +5,8 @@ networks:
     internal: true
   http-network:
     driver: bridge
+volumes:
+  database:
 services:
   database:
     image: postgres:12-alpine

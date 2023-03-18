@@ -12,7 +12,7 @@ services:
       - .env
     container_name: kupipodariday-database
     volumes:
-      - /home/artem/kpd-project/db:/var/lib/postgresql/data
+      - database:/var/lib/postgresql/data
     networks:
       - db-network
     ports:

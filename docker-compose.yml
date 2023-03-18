@@ -34,7 +34,7 @@ services:
       - db-network
       - http-network
     ports:
-      - '4000:3001'
+      - '4000:3000'
     restart: on-failure
   frontend:
     build:

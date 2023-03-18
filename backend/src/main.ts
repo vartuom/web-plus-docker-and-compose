@@ -9,7 +9,7 @@ async function bootstrap() {
             credentials: true,
         },
     });
-    const PORT = process.env.PORT || 3001;
+    const PORT = process.env.PORT || 3000;
 
     // Для валидации данных от клиента в DTO в Nest.js есть встроенный класс ValidationPipe.
     // Чтобы использовать ValidationPipe, понадобится установить два модуля:

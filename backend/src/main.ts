@@ -5,7 +5,7 @@ import { ValidationPipe } from "@nestjs/common";
 async function bootstrap() {
     const app = await NestFactory.create(AppModule, {
         cors: {
-            origin: "http://localhost:8081",
+            origin: "http://vartuom.nomoredomains.work/",
             credentials: true,
         },
     });

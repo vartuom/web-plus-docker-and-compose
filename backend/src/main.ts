@@ -3,7 +3,12 @@ import { AppModule } from "./app.module";
 import { ValidationPipe } from "@nestjs/common";
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule, { cors: true });
+    const app = await NestFactory.create(AppModule, {
+        cors: {
+            origin: "http://localhost:3000",
+            credentials: true,
+        },
+    });
     const PORT = process.env.PORT || 3001;
 
     // Для валидации данных от клиента в DTO в Nest.js есть встроенный класс ValidationPipe.
